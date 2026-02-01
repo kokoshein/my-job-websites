@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar-Thai Job Connect</title>
+    <style>
+        :root { --primary: #0056b3; --secondary: #28a745; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--light); margin: 0; padding: 0; }
+        .header { background: linear-gradient(135deg, var(--primary), #00aaff); color: white; padding: 40px 20px; text-align: center; }
+        .container { max-width: 800px; margin: -30px auto 20px; background: white; padding: 30px; border-radius: 10px; shadow: 0 4px 15px rgba(0,0,0,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .search-group { margin-bottom: 15px; }
+        input[type="text"] { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .btn-search { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        .btn-post { display: inline-block; padding: 10px 20px; background: var(--secondary); color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        .footer { text-align: center; color: #777; font-size: 14px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🇲🇲 ထိုင်းရောက်မြန်မာများ အလုပ်ရှာဖွေရေး 🇹🇭</h1>
+    <p>မြန်မာပြည်သားအချင်းချင်း ကူညီဖို့ ဖန်တီးထားပါသည်</p>
+</div>
+
+<div class="container">
+    <form action="/search" method="get">
+        <div class="search-group">
+            <label>အလုပ်အကိုင် (Job Title):</label>
+            <input type="text" name="q" placeholder="ဥပမာ - စက်ရုံ၊ ယာဉ်မောင်း...">
+        </div>
+        <div class="search-group">
+            <label>မြို့/နေရာ (Location):</label>
+            <input type="text" name="location" placeholder="ဥ.ပမာ - ဘန်ကောက်၊ မဟာချိုင်...">
+        </div>
+        <button type="submit" class="btn-search">အလုပ်ရှာရန် (Search Jobs)</button>
+    </form>
+    
+    <div style="text-align: center;">
+        <a href="/post_job" class="btn-post">အလုပ်ရှင်များ အလုပ်တင်ရန် (Post a Job)</a>
+    </div>
+</div>
+
+<div class="footer">
+    © 2024 Myanmar-Thai Job Connect. Created for our people.
+</div>
+
+</body>
+</html>

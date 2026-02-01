@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>ရှာဖွေတွေ့ရှိသည့် အလုပ်များ</h2>
+    
+    {% if jobs %}
+        {% for job in jobs %} <div class="job-card" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                <div class="job-title" style="color: #0056b3; font-size: 20px;">{{ job.title }}</div>
+                <div class="job-meta">
+                    📍 နေရာ: {{ job.location }} | 💰 လစာ: {{ job.salary }}
+                </div>
+                <div style="margin: 10px 0; color: #28a745; font-weight: bold;">
+                    📞 ဆက်သွယ်ရန်ဖုန်း: <a href="tel:{{ job.phone }}">{{ job.phone }}</a>
+                </div>
+                <p>{{ job.description }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>စိတ်မရှိပါနဲ့၊ သင်ရှာနေတဲ့အလုပ် မတွေ့သေးပါဘူး။</p>
+    {% endif %}
+</div>
